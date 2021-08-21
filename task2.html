@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 2</title>
+    <style>
+        body {
+            background-color: rgb(115, 147, 235);
+            font-size: 14px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Session2 Task</h1>
+    <script>
+        do { name = prompt("Please Enter your Name");
+            //alert(name);
+            }
+        while (name == null || name == "" );
+        flag = 0;
+        correct = false;
+        correctPassword = "123";
+        while (flag < 3 && correct == false)
+        {
+            password = prompt("Please Enter your Password");
+            if (password !=  correctPassword) {flag++;}
+            else if (password ==  correctPassword) {correct = true;}
+        }
+        if (flag === 3) { alert("you’ve entered wrong password 3 times"); exit();}
+        //alert("you are pretty")
+month = ["1", "2" , "3" , "4" , "5" , "6" , "7" , "8" ,"9", "10", "11", "12"]
+day = {
+"1" : 31,
+"2" : 28 ,
+"3" : 31 ,
+"4" : 30 ,
+"5" : 31 ,
+"6" : 30 ,
+"7" : 31 , 
+"8" : 31 ,
+"9" : 30 , 
+"10" : 31 , 
+"11" : 30 , 
+"12" : 31 
+}
+
+
+    do {
+    BirthMonth = prompt("Please Enter your Birth Month");
+       }
+    while (!month.includes(BirthMonth))
+
+    maximum = parseInt(day[BirthMonth]);
+    minimum = 1; 
+    validDay = false;
+
+    while (!validDay)
+   {
+        BirthDay = prompt("Please Enter your Birth Day");
+        BirthDayInt = parseInt(BirthDay);
+        if (BirthDayInt <= maximum  && BirthDayInt >= minimum) {validDay = true;}
+    }
+    
+    
+    BirthMonthInt = parseInt(BirthMonth); 
+    CheckDate = new Date(1995, BirthMonthInt-1, BirthDayInt);
+    Date1 = new Date(1995, 2-1 , 18);
+    Date2 = new Date(1995, 1-1 , 20);
+    Date3 = new Date(1995, 3-1 , 20);
+    Date4 = new Date(1995, 4-1 , 19);
+    Date5 = new Date(1995, 5-1 , 20);
+    Date6 = new Date(1995, 6-1 , 20);
+    Date7 = new Date(1995, 7-1 , 22);
+    Date8 = new Date(1995, 8-1 , 22);
+    Date9 = new Date(1995, 9-1 , 22);
+    Date10 = new Date(1995, 10-1 , 22);
+    Date11 = new Date(1995, 11-1 , 21);
+    Date12 = new Date(1995, 12-1 , 21);
+
+
+
+if (CheckDate.getTime() <= Date1.getTime() && CheckDate.getTime() >= Date2.getTime()) 
+{alert("Aquarius");}
+ 
+else if (CheckDate.getTime() <= Date3.getTime() && CheckDate.getTime() > Date1.getTime()) 
+{alert("Pisces");}
+
+else if (CheckDate.getTime() <= Date4.getTime() && CheckDate.getTime() > Date3.getTime()) 
+{alert("Aries");}
+
+else if (CheckDate.getTime() <= Date5.getTime() && CheckDate.getTime() > Date4.getTime()) 
+{alert("Taurus");}
+
+else if (CheckDate.getTime() <= Date6.getTime() && CheckDate.getTime() > Date5.getTime()) 
+{alert("Gemini");}
+
+else if (CheckDate.getTime() <= Date7.getTime() && CheckDate.getTime() > Date6.getTime()) 
+{alert("Cancer");}
+
+else if (CheckDate.getTime() <= Date8.getTime() && CheckDate.getTime() > Date7.getTime()) 
+{alert("Leo");}
+
+else if (CheckDate.getTime() <= Date9.getTime() && CheckDate.getTime() > Date8.getTime()) 
+{alert("Virgo");}
+
+else if (CheckDate.getTime() <= Date10.getTime() && CheckDate.getTime() > Date9.getTime()) 
+{alert("Libra");}
+
+else if (CheckDate.getTime() <= Date11.getTime() && CheckDate.getTime() > Date10.getTime()) 
+{alert("Scorpio");}
+
+else if (CheckDate.getTime() <= Date12.getTime() && CheckDate.getTime() > Date11.getTime()) 
+{alert("Sagittarius");}
+
+else if (CheckDate.getTime() < Date2.getTime() || CheckDate.getTime() > Date12.getTime()) 
+{alert("Capricorn");}
+
+
+    </script>
+</body>
+
+</html>
